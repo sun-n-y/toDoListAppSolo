@@ -15,10 +15,18 @@ function App() {
     const newItems = [...items, newItem];
     setItems(newItems);
   };
+
+  const deleteItem = (itemId) => {
+    const newItems = items.filter((item) => {
+      return item.id !== itemId;
+    });
+    setItems(newItems);
+  };
+
   return (
     <main>
       <Form addItems={addItems} />
-      <List items={items} />
+      <List items={items} deleteItem={deleteItem} />
     </main>
   );
 }
