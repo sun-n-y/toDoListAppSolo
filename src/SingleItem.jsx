@@ -6,7 +6,9 @@ const SingleItem = ({ item, deleteItem, checkItem }) => {
         value={item.completed}
         onChange={() => checkItem(item.id)}
       />
-      <h4>{item.name}</h4>
+      <h4 style={{ textDecoration: item.completed && 'line-through' }}>
+        {item.name}
+      </h4>
       <button
         type="button"
         className="btn-delete"
