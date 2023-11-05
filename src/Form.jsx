@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-const Form = () => {
+const Form = ({ addItems }) => {
   const [newItem, setNewItem] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!newItem) return;
-    console.log(newItem);
+    addItems(newItem);
   };
   return (
     <section className="section-center">
