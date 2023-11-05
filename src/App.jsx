@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Form from './Form';
 import { nanoid } from 'nanoid';
+import List from './List';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -17,6 +18,7 @@ function App() {
   return (
     <main>
       <Form addItems={addItems} />
+      <List items={items} />
     </main>
   );
 }

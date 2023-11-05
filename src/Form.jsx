@@ -6,6 +6,7 @@ const Form = ({ addItems }) => {
     e.preventDefault();
     if (!newItem) return;
     addItems(newItem);
+    setNewItem('');
   };
   return (
     <section className="section-center">
