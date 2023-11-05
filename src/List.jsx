@@ -1,5 +1,12 @@
+import SingleItem from './SingleItem';
+
 const List = ({ items }) => {
-  console.log(items);
-  return <div className="list"></div>;
+  return (
+    <div className="list">
+      {items.map((item) => {
+        return <SingleItem item={item} key={item.id} />;
+      })}
+    </div>
+  );
 };
 export default List;
