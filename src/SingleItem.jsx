@@ -3,7 +3,7 @@ const SingleItem = ({ item, deleteItem, checkItem }) => {
     <div className="single-item">
       <input
         type="checkbox"
-        value={item.completed}
+        checked={item.completed}
         onChange={() => checkItem(item.id)}
       />
       <h4 style={{ textDecoration: item.completed && 'line-through' }}>
