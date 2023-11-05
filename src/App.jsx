@@ -23,10 +23,21 @@ function App() {
     setItems(newItems);
   };
 
+  const checkItem = (itemId) => {
+    const newItems = items.map((item) => {
+      if (item.id == itemId) {
+        const newItem = { ...item, completed: !item.completed };
+        return newItem;
+      }
+      return item;
+    });
+    setItems(newItems);
+  };
+
   return (
     <main>
       <Form addItems={addItems} />
-      <List items={items} deleteItem={deleteItem} />
+      <List items={items} deleteItem={deleteItem} checkItem={checkItem} />
     </main>
   );
 }

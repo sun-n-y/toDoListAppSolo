@@ -1,10 +1,17 @@
 import SingleItem from './SingleItem';
 
-const List = ({ items, deleteItem }) => {
+const List = ({ items, deleteItem, checkItem }) => {
   return (
     <div className="list">
       {items.map((item) => {
-        return <SingleItem item={item} key={item.id} deleteItem={deleteItem} />;
+        return (
+          <SingleItem
+            item={item}
+            key={item.id}
+            deleteItem={deleteItem}
+            checkItem={checkItem}
+          />
+        );
       })}
     </div>
   );
