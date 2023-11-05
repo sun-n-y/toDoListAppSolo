@@ -1,6 +1,6 @@
 <a name="custom_anchor_name"></a>
 
-# a slider app :film_strip:
+# a to-do list app :spiral_notepad:
 
 ## Concepts applied but not limited too
 
